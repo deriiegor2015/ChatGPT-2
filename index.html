@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>MyAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <button onclick="newChat()">➕ Новий чат</button>
+  <div class="tabs">
+    <button class="active" onclick="openTab('chat', this)">💬 Chat</button>
+    <button onclick="openTab('image', this)">🖼️ Image</button>
+    <button onclick="openTab('video', this)">🎥 Video</button>
+  </div>
+</div>
+
+<!-- CHAT -->
+<div id="chatTab" class="chat"></div>
+
+<!-- IMAGE -->
+<div id="imageTab" class="center hidden">
+  <h2>🖼️ Image Generator</h2>
+  <p>Demo режим</p>
+  <button onclick="alert('Image generated (demo)')">Generate</button>
+</div>
+
+<!-- VIDEO -->
+<div id="videoTab" class="center hidden">
+  <h2>🎥 Video Generator</h2>
+  <p>Demo режим</p>
+  <button onclick="alert('Video generated (demo)')">Generate</button>
+</div>
+
+<!-- INPUT -->
+<div class="input-box" id="inputBox">
+  <input id="input" placeholder="Напиши повідомлення...">
+  <button onclick="send()">▶</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
