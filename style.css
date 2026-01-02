@@ -1,0 +1,109 @@
+:root {
+  --bg-main: #343541;
+  --bg-header: #202123;
+  --bg-panel: #40414f;
+  --bg-user: #2a2b32;
+  --bg-bot: #444654;
+  --accent: #19c37d;
+  --text-main: #ececf1;
+  --text-muted: #b4b4c0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: system-ui, Arial;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: var(--bg-header);
+  border-bottom: 1px solid #2f303a;
+}
+
+.header button {
+  background: var(--bg-panel);
+  color: var(--text-main);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: var(--accent);
+  color: #000;
+}
+
+/* CHAT */
+.chat {
+  padding: 15px;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+/* MESSAGE */
+.msg {
+  max-width: 85%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  animation: fadeIn 0.2s;
+}
+
+.user {
+  background: var(--bg-user);
+  margin-left: auto;
+}
+
+.bot {
+  background: var(--bg-bot);
+  border-left: 3px solid var(--accent);
+}
+
+/* INPUT */
+.input-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  background: var(--bg-header);
+}
+
+.input-box input {
+  flex: 1;
+  padding: 14px;
+  background: var(--bg-panel);
+  border: none;
+  border-radius: 8px;
+  color: var(--text-main);
+}
+
+.input-box button {
+  margin-left: 8px;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  padding: 0 16px;
+}
+
+/* TABS */
+.center {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.hidden { display: none; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
